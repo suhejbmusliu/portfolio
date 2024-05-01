@@ -4,7 +4,7 @@ import React from 'react';
 import Image from '../assets/profile.svg';
 
 //icons
-import { FaGithub, FaLinkedin, FaGoogle } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
 
 //type animation
 import { TypeAnimation } from 'react-type-animation';
@@ -69,7 +69,7 @@ const Banner = () => {
                   <FaLinkedin/>
                 </a>
                 <a href='#'>
-                  <FaGoogle/>
+                  <FaFacebook/>
                 </a>
               </motion.div>
 
