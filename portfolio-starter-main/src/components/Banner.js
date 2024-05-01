@@ -49,7 +49,7 @@ const Banner = () => {
             
             </motion.div>
 
-            <motion.p variants={fadeIn('up', 0.5)} initial='hidden' whileInView={'show'} viewport={{once: false, amount: 0.7}} className='mb-8 max-w-lg mx-auto lg:mx-0'>
+            <motion.p variants={fadeIn('up', 0.5)} initial='hidden' whileInView={'show'} viewport={{once: false, amount: 0.7}} className='mb-8 max-w-lg mx-auto lg:mx-0 text-2xl'>
               Proficient in coding for webdeveloping. I am enhancing my ability to create dynamic and user-friendly web applications. 
             </motion.p>
 
