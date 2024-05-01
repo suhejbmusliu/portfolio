@@ -31,8 +31,8 @@ const About = () => {
                 I'm Freelance Front-end Developer
               </h3>
 
-              <p className='mb-6 text-2xl'> {/* Increased font size */}
-              I'm  a Frontend Web Developer, Logo Designer, and Web Designer. I specialize in crafting captivating digital experiences through clean interfaces, memorable logos, and stunning web layouts. Let's collaborate and turn your vision into a digital masterpiece. Explore my portfolio and let's create something extraordinary together.
+              <p className='mb-6 text-xl'> {/* Increased font size */}
+               I'm, a Frontend Web Developer, Logo Designer, and Web Designer. I specialize in crafting captivating digital experiences through clean interfaces, memorable logos, and stunning web layouts. Let's collaborate and turn your vision into a digital masterpiece. Explore my portfolio and let's create something extraordinary together.
               </p>
 
               <div className='flex gap-x-8 items-center'>
