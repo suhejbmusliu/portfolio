@@ -16,7 +16,7 @@ const About = () => {
           { /* IMG */}
           <div className='lg:flex-1 bg-contain bg-no-repeat h-[640px]'>
             <motion.div variants={fadeIn('right', 0.3)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.3}}> 
-              <img src={Image} alt='' className='w-full lg:rounded max-w-[50vh] max-h-[50vh] lg:max-h-full' />
+              <img src={Image} alt='' className='w-full  max-w-[50vh] max-h-[50vh] lg:max-h-full rounded-3xl' />
             </motion.div>
           </div>
 
