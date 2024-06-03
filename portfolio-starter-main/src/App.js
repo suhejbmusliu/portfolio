@@ -8,6 +8,7 @@ import Services from './components/Services';
 import Work from './components/Work';
 import Contact from './components/Contact';
 
+
 const App = () => {
   return (
     <div className='bg-site bg-no-repeat bg-cover overflow-hidden'>
@@ -18,7 +19,7 @@ const App = () => {
       <Services />
       <Work />
       <Contact />
-      <div className='h-[4000px]'></div> 
+      
     </div>
   );
 };
