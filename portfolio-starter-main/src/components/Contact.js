@@ -4,36 +4,53 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  const [user_name, setUserName] = useState('');
+  const [user_email, setUserEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleChange = e => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    switch (e.target.name) {
+      case 'name':
+        setUserName(e.target.value);
+        break;
+      case 'email':
+        setUserEmail(e.target.value);
+        break;
+      case 'message':
+        setMessage(e.target.value);
+        break;
+      default:
+        break;
+    }
   };
 
   const handleSubmit = e => {
     e.preventDefault();
 
-    console.log(formData.email); 
+    // Basic form validation
+    if (!user_name || !user_email || !message) {
+      alert('Please fill out all fields.');
+      return;
+    }
 
-    emailjs.sendForm('service_xax1j09', 'template_dra9wh4', e.target, 'R0rzN9Wn-2VS0-lpc')
+    const templateParams = {
+      user_name: user_name,
+      user_email: user_email,
+      message: message
+    };
+
+    emailjs.send('service_xax1j09', 'template_yeh603j', templateParams, 'R0rzN9Wn-2VS0-lpc')
       .then((result) => {
+        alert('Email sent successfully!');
         console.log(result.text);
-        
       }, (error) => {
+        alert('Failed to send email. Please try again later.');
         console.log(error.text);
- 
       });
 
-  
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
+    setUserName('');
+    setUserEmail('');
+    setMessage('');
   };
 
   return (
@@ -55,7 +72,7 @@ const Contact = () => {
               className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all'
               type='text'
               name='name'
-              value={formData.name}
+              value={user_name}
               onChange={handleChange}
               placeholder='Your name'
             />
@@ -64,7 +81,7 @@ const Contact = () => {
               className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all'
               type='email'
               name='email'
-              value={formData.email}
+              value={user_email}
               onChange={handleChange}
               placeholder='Your email'
             />
@@ -72,7 +89,7 @@ const Contact = () => {
             <textarea 
               className='bg-transparent border-b py-12 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12'
               name='message'
-              value={formData.message}
+              value={message}
               onChange={handleChange}
               placeholder='Your message'
             ></textarea>
