@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const [user_name, setUserName] = useState('');
@@ -29,7 +31,10 @@ const Contact = () => {
 
     // Basic form validation
     if (!user_name || !user_email || !message) {
-      alert('Please fill out all fields.');
+      toast.warn('Please fill out all fields.', {
+        className: 'bg-yellow-100 text-yellow-800',
+        bodyClassName: 'text-sm',
+      });
       return;
     }
 
@@ -41,10 +46,18 @@ const Contact = () => {
 
     emailjs.send('service_xax1j09', 'template_yeh603j', templateParams, 'R0rzN9Wn-2VS0-lpc')
       .then((result) => {
-        alert('Email sent successfully!');
+        toast.success('Email sent successfully!', {
+          className: 'bg-green-100 text-green-800',
+          bodyClassName: 'text-sm',
+          icon: '✔️',
+        });
         console.log(result.text);
       }, (error) => {
-        alert('Failed to send email. Please try again later.');
+        toast.error('Failed to send email. Please try again later.', {
+          className: 'bg-red-100 text-red-800',
+          bodyClassName: 'text-sm',
+          icon: '❌',
+        });
         console.log(error.text);
       });
 
@@ -98,9 +111,23 @@ const Contact = () => {
               Send message
             </button>
           </motion.form>
-
         </div>
       </div>
+      <ToastContainer
+  position="top-center"
+  autoClose={5000}
+  hideProgressBar={false}
+  newestOnTop={false}
+  closeOnClick
+  rtl={false}
+  pauseOnFocusLoss
+  draggable
+  pauseOnHover
+  className="mt-4 mx-4 flex justify-center items-center"
+  toastClassName="text-sm p-3 rounded-md shadow-lg"
+/>
+
+
     </section>
   );
 };
