@@ -34,7 +34,9 @@ const Services = () => {
           <motion.div variants={fadeIn('right', 0.3)} initial="hidden" whileInView={"show"} viewport={{once:    false, amount: 0.3}} className='flex-1 mb-12 lg-mb-0'>
             <h2 className='h2 text-accent mb-6'>What I Do.</h2>
             <h3 className='h3 mx-w-[455px] mb-16'>I'm, a Frontend Web Developer, Logo Designer, and Web Designer.</h3>
-            <button className='btn btn-sm'>See my work</button>
+            <a href='https://github.com/suhejbmusliu' className='btn btn-sm p-5 '>
+                See my work
+                </a>
           </motion.div>
           
           {/* services */}

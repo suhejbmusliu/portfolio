@@ -3,6 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 import Image from '../assets/about-pic.jpeg';
+import PDF from '../assets/SuhejbCV.pdf'; // Import the PDF file
 
 const About = () => {
   const [ref, ] = useInView({
@@ -36,7 +37,7 @@ const About = () => {
               </p>
 
               <div className='flex gap-x-8 items-center'>
-                <a href='../assets/SuhejbCV.pdf' download className='btn btn-lg flex items-center justify-center'>Download CV</a>
+                <a href={PDF} download className='btn btn-lg flex items-center justify-center'>Download CV</a>
               </div>
             </motion.div>
           </div>

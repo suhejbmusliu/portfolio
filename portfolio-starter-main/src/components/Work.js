@@ -19,10 +19,13 @@ const Work = () => {
                 <h2 className='h2 leading-tight text-accent'>
                   My latest <br/> Work
                 </h2>
-                <p className='max-w-sm mb-16'>
-                Your logo is the cornerstone of your personal brand. Let me craft a visual identity that reflects your unique personality and values. From concept sketches to polished designs.
+                <p className='max-w-sm mb-16 text-[25px]'>
+                Let's collaborate to transform your vision into a remarkable reality. Together, we'll propel your project to new heights of success.
                 </p>
-                <button className='btn btn-sm'>View all project</button>
+                
+                <a href='https://github.com/suhejbmusliu' className='btn btn-sm p-5 '>
+                View all project
+                </a>
               </div>
 
               {/* image */}

@@ -15,6 +15,14 @@ import { motion } from 'framer-motion';
 //variants
 import { fadeIn } from '../variants';
 
+
+const scrollToContact = () => {
+  const contactSection = document.getElementById('contact');
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 const Banner = () => {
   return (
     <section className='min-h-[85vh] lg:min-h-[78vh] flex items-center' id='home'>
@@ -54,8 +62,8 @@ const Banner = () => {
             </motion.p>
 
               <motion.div variants={fadeIn('up', 0.6)} initial='hidden' whileInView={'show'} viewport={{once: false, amount: 0.7}}  className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
-                <button className='btn btn-lg'>Contact Me</button>
-                <a href='#' className='text-gradient btn-link'>
+              <button className='btn btn-lg' onClick={scrollToContact}>Contact Me</button>
+                <a href='https://github.com/suhejbmusliu' className='text-gradient btn-link'>
                   My Portofolio
                 </a>
               </motion.div>
@@ -68,7 +76,7 @@ const Banner = () => {
                 <a href='https://www.linkedin.com/in/suhejb-musliu-8875691a8/'>
                   <FaLinkedin/>
                 </a>
-                <a href='#'>
+                <a href='https://www.facebook.com/suhejb.01?mibextid=LQQJ4d'>
                   <FaFacebook/>
                 </a>
               </motion.div>
