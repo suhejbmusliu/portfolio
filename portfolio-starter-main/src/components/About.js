@@ -12,7 +12,7 @@ const About = () => {
 
   return (
     <section className='section' id='about' ref={ref}>
-      <div className='container mx-auto'>
+    <div className='container mx-auto mb-24 '>
         <div className='flex flex-col lg:flex-row lg:items-center gap-y-0 lg:gap-x-20 lg-gap-y-0 h-screen'>
           { /* IMG */}
           <div className='lg:flex-1 bg-contain bg-no-repeat h-[640px]'>

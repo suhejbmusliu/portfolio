@@ -114,18 +114,18 @@ const Contact = () => {
         </div>
       </div>
       <ToastContainer
-  position="top-center"
-  autoClose={5000}
-  hideProgressBar={false}
-  newestOnTop={false}
-  closeOnClick
-  rtl={false}
-  pauseOnFocusLoss
-  draggable
-  pauseOnHover
-  className="mt-4 mx-4 flex justify-center items-center"
-  toastClassName="text-sm p-3 rounded-md shadow-lg"
-/>
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            className="mt-4 mx-4 flex justify-center items-center"
+            toastClassName="text-sm p-3 rounded-md shadow-lg"
+          />
 
 
     </section>

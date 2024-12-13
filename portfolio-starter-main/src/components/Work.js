@@ -4,15 +4,15 @@ import { motion } from 'framer-motion'
 //variante 
 import {fadeIn} from '../variants'
 //image
-import img1 from '../assets/Qendraera-project.jpg'
-import img2 from '../assets/Aodproject.png'
-import img3 from '../assets/Logo-bg.png'
+import img1 from '../assets/Qendraera.png'
+import img2 from '../assets/Aodproject.jpg'
+import img3 from '../assets/Logofolio.png'
 
 const Work = () => {
   return <section className='section' id='work'>
       <div className='container mx-auto'>
         <div className='flex flex-col lg:flex-row gap-x-10'>
-            <motion.div variants={fadeIn('right', 0.3)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.3}} className='flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0'> 
+            <motion.div variants={fadeIn('right', 0.3)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.3}} className='flex-1 flex flex-col gap-y-16 mb-10 lg:mb-0'> 
 
               {/* text */}
               <div>
@@ -67,7 +67,7 @@ const Work = () => {
 
                   {/* tittle */}
                   <div className='absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50'>
-                    <span className='text-3xl text-white'>ArOfDifference</span>
+                    <span className='text-3xl text-white'>ArtOfDifference</span>
                   </div>
                   
 
